@@ -1,67 +1,89 @@
 <!DOCTYPE html>
-<html lang="id">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Web GIS Rumah Sakit Indonesia</title>
 
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-
     <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
+        html, body {
             margin: 0;
+            width: 100%;
+            height: 100%;
             font-family: Arial, sans-serif;
         }
 
-        .header {
+        #judul {
             height: 60px;
-            background: #ffffff;
             display: flex;
             align-items: center;
-            padding: 0 20px;
-            border-bottom: 1px solid #ddd;
+            padding-left: 20px;
+            background: #ffffff;
+            border-bottom: 1px solid #ccc;
         }
 
-        .header h1 {
-            margin: 0;
-            font-size: 22px;
-        }
-
-        #map {
+        #peta {
             width: 100%;
-            height: calc(100vh - 60px);
+            height: calc(100% - 60px);
+            background: #e8f1f5;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .daratan {
+            position: absolute;
+            background: #d9e6c3;
+            border: 2px solid #777;
+            border-radius: 50%;
+        }
+
+        .indonesia {
+            left: 15%;
+            top: 35%;
+            width: 70%;
+            height: 25%;
+        }
+
+        .titik {
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            background: red;
+            border-radius: 50%;
+            border: 2px solid white;
+        }
+
+        .info {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px #888;
         }
     </style>
 </head>
 
 <body>
 
-    <div class="header">
-        <h1>Web GIS Rumah Sakit Indonesia</h1>
+    <div id="judul">
+        <h2>Web GIS Rumah Sakit Indonesia</h2>
     </div>
 
-    <div id="map"></div>
+    <div id="peta">
 
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+        <div class="daratan indonesia"></div>
 
-    <script>
-        // Membuat peta Indonesia
-        var map = L.map("map");
+        <div class="titik" style="left: 48%; top: 47%;"></div>
+        <div class="titik" style="left: 55%; top: 44%;"></div>
+        <div class="titik" style="left: 62%; top: 51%;"></div>
 
-        // Menentukan tampilan awal
-        map.setView([-2.5, 118], 5);
+        <div class="info">
+            <b>WEB GIS</b><br>
+            Rumah Sakit Indonesia
+        </div>
 
-        // Basemap OpenStreetMap
-        L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-            maxZoom: 19,
-            attribution: "© OpenStreetMap contributors"
-        }).addTo(map);
-    </script>
+    </div>
 
 </body>
 </html>

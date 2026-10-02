@@ -17,30 +17,26 @@
             display: flex;
             align-items: center;
             padding-left: 20px;
-            background: #ffffff;
+            background: white;
             border-bottom: 1px solid #ccc;
         }
 
         #peta {
             width: 100%;
             height: calc(100% - 60px);
-            background: #e8f1f5;
+            background: #dcecf3;
             position: relative;
-            overflow: hidden;
         }
 
         .daratan {
             position: absolute;
-            background: #d9e6c3;
-            border: 2px solid #777;
-            border-radius: 50%;
-        }
-
-        .indonesia {
             left: 15%;
             top: 35%;
             width: 70%;
             height: 25%;
+            background: #d9e6c3;
+            border: 2px solid #555;
+            border-radius: 50%;
         }
 
         .titik {
@@ -51,39 +47,24 @@
             border-radius: 50%;
             border: 2px solid white;
         }
-
-        .info {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: white;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px #888;
-        }
     </style>
 </head>
 
 <body>
 
-    <div id="judul">
-        <h2>Web GIS Rumah Sakit Indonesia</h2>
-    </div>
+<div id="judul">
+    <h2>Web GIS Rumah Sakit Indonesia</h2>
+</div>
 
-    <div id="peta">
+<div id="peta">
 
-        <div class="daratan indonesia"></div>
+    <div class="daratan"></div>
 
-        <div class="titik" style="left: 48%; top: 47%;"></div>
-        <div class="titik" style="left: 55%; top: 44%;"></div>
-        <div class="titik" style="left: 62%; top: 51%;"></div>
+    <div class="titik" style="left: 48%; top: 47%;"></div>
+    <div class="titik" style="left: 55%; top: 44%;"></div>
+    <div class="titik" style="left: 62%; top: 51%;"></div>
 
-        <div class="info">
-            <b>WEB GIS</b><br>
-            Rumah Sakit Indonesia
-        </div>
-
-    </div>
+</div>
 
 </body>
 </html>
